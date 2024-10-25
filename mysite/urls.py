@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# 用户发起请求时，Django 找到名为 urlpatterns 的变量并按顺序遍历这些模式
+# 例如找到 balls/ 之后，会剥离匹配的文本（"polls/"）
+# 然后将剩余的文本发送给 'balls.urls' URL 配置
 urlpatterns = [
     # path 最少要两个参数 route 和 view
     path('balls/', include('balls.urls')),
