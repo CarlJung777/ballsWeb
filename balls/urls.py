@@ -7,4 +7,7 @@ from . import views
 urlpatterns = [
     # "" 表示 URL 为空字符串，也就是根路径，通常代表网站的主页（如 http://localhost:8000/）
     path("", views.my_view, name="my_view"),
+    path("<int:question_id>/", views.detail, name="detail"),
+    path("<int:question_id>/results/", views.results, name="results"),
+    path("<int:question_id>/vote/", views.vote, name="vote"),
 ]
