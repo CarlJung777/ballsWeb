@@ -17,7 +17,7 @@ from .models import Question
 def my_view(request):
     return HttpResponse("Hello, lllll. balls")
 
-
+# 如果找不到数据库中的对象，则抛出错误
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, "balls/detail.html", {"question": question})
