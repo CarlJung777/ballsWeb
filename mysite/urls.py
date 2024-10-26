@@ -24,5 +24,5 @@ urlpatterns = [
     # path 最少要两个参数 route 和 view
     path('balls/', include('balls.urls')),
     path('admin/', admin.site.urls),
-    
+
 ]

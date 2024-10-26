@@ -11,11 +11,13 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
     
+    # def was_published_recently(self):
+    #     # 检查问题是否是在过去的 24 小时内发布， 大于等于的情况下返回 True
+    #     #  datetime.timedelta(days=1) 表示时间段，为 1 天
+    #     return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
     def was_published_recently(self):
-        # 检查问题是否是在过去的 24 小时内发布， 大于等于的情况下返回 True
-        #  datetime.timedelta(days=1) 表示时间段，为 1 天
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-    
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
 class Choice(models.Model):
     # ForeignKey 定义相互之间关系， 这里每个选择都对应一个问题。
