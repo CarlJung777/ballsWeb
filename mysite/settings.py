@@ -56,6 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 待搜索路径，载入Django模版时使用，包含多个系统目录的文件列表
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -117,6 +118,7 @@ USE_TZ = True # 让 Django 使用时区支持时为 True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# 静态文件路径
 STATIC_URL = 'static/'
 
 # Default primary key field type

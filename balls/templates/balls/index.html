@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'balls/style.css' %}">
+
 <!--使用 Django 的模板系统，只要创建一个视图，就可以将页面的设计从代码中分离出来-->
 {% if latest_question_list %}
 <ul>
