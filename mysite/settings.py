@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 待搜索路径，载入Django模版时使用，包含多个系统目录的文件列表
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         # 设置为 true 时，自动在每个应用包内递归查找 templates/ 子目录
         'APP_DIRS': True,
         'OPTIONS': {
